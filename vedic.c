@@ -25,8 +25,8 @@ int main()
     #pragma omp parallel num_threads(n) private(sum,nj,nj1,t1,t2,t3)
     {
     	#pragma omp for
-    	for(j=1;j<=n;j++) //apply the formula for Nn2 = E(j=1ton) 
-    	{ 	int id = omp_get_thread_num();
+    	for(j=1;j<=n;j++) //apply the formula for Nn2 = E(j=1ton) //N 2 n = a n-1 × 10 n-1 (N n + N n-1 ) + N n 2-1
+    	{ 	int id = omp_get_thread_num(); //37 2 = 3 × 10(37 + 7) + 7 2 = 1369
 	    	nj=n-j;
 		nj1=n-j+1;               
 		t1=N%((int) (pow(10,nj)));
